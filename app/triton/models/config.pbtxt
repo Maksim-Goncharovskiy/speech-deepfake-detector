@@ -1,0 +1,25 @@
+backend: "python"
+max_batch_size: 0
+
+# Описание входов
+input [
+  {
+    name: "input_waveform"
+    data_type: TYPE_FP32
+    dims: [ 1, 80000 ]
+  }
+]
+
+# Описание выходов
+output [
+  {
+    name: "probas"
+    data_type: TYPE_FP32
+    dims: [ 1 ] 
+  },
+  {
+    name: "metadata"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+  }
+]

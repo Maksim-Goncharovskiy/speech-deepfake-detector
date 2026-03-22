@@ -1,0 +1,636 @@
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+  line-height: 1.5;
+  color: #1f1f1f;
+  background-color: #f8f9fa;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+          .css-1ly3o60 {
+            min-height: 100vh;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .css-1ge8alb {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+
+          .css-ryri3p {
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+          }
+
+          .css-6u2mzn-MuiTypography-root {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+          }
+
+          .css-wuyzw2 {
+            font-size: 1.125rem;
+            color: #495057;
+            margin-bottom: 16px;
+            line-height: 1.5;
+          }
+
+          .css-1vnaoqm-MuiTypography-root {
+            font-size: 1.125rem;
+            color: #6c757d;
+          }
+
+          .css-1bfca7k {
+            max-width: 100%;
+            height: auto;
+            margin-top: 16px;
+          }
+
+          .css-aw9yht {
+            width: 100%;
+            max-width: 1200px;
+            margin: 32px auto 0;
+          }
+
+          .css-10dgn66-MuiTabs-root {
+            max-width: 600px;
+            margin: 0 auto;
+          }
+
+          .css-dn4xd9-MuiButtonBase-root-MuiTab-root {
+            font-size: 1rem;
+            min-height: 48px;
+            color: #6c757d;
+            text-transform: none;
+            opacity: 0.7;
+          }
+
+          .css-dn4xd9-MuiButtonBase-root-MuiTab-root.Mui-selected {
+            color: #1f1f1f;
+            opacity: 1;
+            font-weight: 500;
+          }
+
+          .css-1qltlow-MuiTabs-indicator {
+            background-color: #579af6;
+            height: 2px;
+          }
+
+          .css-1bysp9h {
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 24px;
+            justify-items: center;
+          }
+
+          .css-6a2zno,
+          .css-180p9r8,
+          .css-1rcal0s,
+          .css-1yjgju4 {
+            width: 100%;
+            max-width: 273px;
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          .css-1w1wfcn {
+            font-size: 2.25rem;
+            margin-bottom: 20px;
+            color: #579af6;
+          }
+
+          .css-1o7a71b-MuiTypography-root {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .css-1lwlsct-MuiTypography-root {
+            font-size: 1rem;
+            color: #495057;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+
+          .css-1pcta4y-MuiTypography-root {
+            font-size: 1rem;
+            color: #579af6;
+            font-weight: 500;
+            cursor: pointer;
+          }
+
+          .css-1pcta4y-MuiTypography-root:hover {
+            color: #3a7bd5;
+            text-decoration: underline;
+          }
+
+          .css-9inc11-MuiTypography-root {
+            font-size: 1rem;
+            color: #adb5bd;
+            font-weight: 500;
+          }
+
+          .css-13zuxin-MuiButtonBase-root-MuiFab-root {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #579af6;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+          }
+
+          .css-13zuxin-MuiButtonBase-root-MuiFab-root:hover {
+            background-color: #4a8ae5;
+          }
+
+          .css-1umw9bq-MuiSvgIcon-root {
+            width: 1.5em;
+            height: 1.5em;
+            fill: currentColor;
+          }
+
+          /* Базовая адаптивность */
+          @media (max-width: 768px) {
+            .css-6u2mzn-MuiTypography-root { font-size: 2rem; }
+            .css-1o7a71b-MuiTypography-root { font-size: 1.75rem; }
+            .css-1bysp9h { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+          }
+
+         /* базовые стили =============================== */
+
+
+        .upload-form {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 1rem;
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+          
+          @media (max-width: 768px) {
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 100%; 
+          }
+        }
+        
+        h1 {
+          text-align: center;
+          margin-bottom: 2rem;
+          color: #5b9cf7;
+        }
+
+        h4 {
+          text-align: center;
+          margin-bottom: 2rem;
+          color: #495057;
+        }
+        
+        .form-section {
+          margin-bottom: 2rem;
+          padding: 1.5rem;
+          background: #f8f9fa;
+          border-radius: 8px;
+        }
+        
+        h3 {
+          margin-top: 0;
+          margin-bottom: 1rem;
+          color: #495057;
+          font-size: 1.1rem;
+        }
+
+        .submit-button {
+          padding: 0.75rem 2rem;
+          font-size: 1.1rem;
+          background: #007bff;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: background 0.3s;
+        }
+        
+        .submit-button:hover:not(:disabled) {
+          background: #0056b3;
+        }
+        
+        .submit-button:disabled {
+          background: #ccc;
+          cursor: not-allowed;
+        }
+
+        .button-loading {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+
+        .spinner {
+          width: 16px;
+          height: 16px;
+          border: 2px solid #ffffff;
+          border-top-color: transparent;
+          border-radius: 50%;
+          animation: spin 0.8s linear infinite;
+        }
+
+        .progress-ring-wrapper {
+          position: relative;
+          width: 36px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .progress-ring {
+          transform: rotate(-90deg);
+          width: 36px;
+          height: 36px;
+        }
+
+        .progress-ring-bg {
+          stroke: #e0e0e0;
+        }
+
+        .progress-ring-fill {
+          stroke: #579af6;
+          transition: stroke-dashoffset 0.3s ease;
+        }
+
+        .progress-text {
+          position: absolute;
+          font-size: 0.7rem;
+          font-weight: 600;
+          color: white;
+        }
+
+        .progress-label {
+          margin-left: 8px;
+          font-size: 0.9rem;
+        }
+
+        .input-mode-toggle {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 20px;
+          justify-content: center;
+        }
+
+        .mode-btn {
+          flex: 1;
+          padding: 12px;
+          border: 1px solid #ddd;
+          background: #fff;
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: 500;
+          transition: all 0.2s;
+        }
+
+        .mode-btn.active {
+          background-color: #579af6;
+          color: white;
+          border-color: #579af6;
+        }
+
+        .mode-btn:hover:not(.active) {
+          background-color: #f0f4f8;
+        }
+
+        .selected-file-info {
+          margin-top: 10px;
+          padding: 10px;
+          background-color: #e8f5e9;
+          border-radius: 4px;
+          color: #2e7d32;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+
+        /* Контейнер диктофона - точка входа для изоляции */
+        .audio-recorder-container {
+          border: 2px dashed #ccc;
+          border-radius: 12px;
+          padding: 30px 20px;
+          text-align: center;
+          background-color: #f9f9f9;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+          /* Сброс возможных наследуемых стилей шрифтов, если нужно */
+          font-family: inherit; 
+        }
+
+        /* --- Стили статуса --- */
+        .audio-recorder-container .recorder-status {
+          margin-bottom: 15px;
+          font-weight: bold;
+          font-size: 1rem;
+          min-height: 24px;
+        }
+
+        .audio-recorder-container .status-indicator {
+          padding: 6px 12px;
+          border-radius: 20px;
+          background: #eee;
+          font-size: 0.9rem;
+          display: inline-block;
+        }
+
+        .audio-recorder-container .status-indicator.recording { 
+          color: #d32f2f; 
+          background: #ffebee; 
+          animation: pulse 1.5s infinite; 
+          box-shadow: 0 0 8px rgba(211, 47, 47, 0.3);
+        }
+
+        .audio-recorder-container .status-indicator.paused { color: #f57c00; background: #fff3e0; }
+        .audio-recorder-container .status-indicator.finished { color: #388e3c; background: #e8f5e9; }
+        .audio-recorder-container .status-indicator.error { color: #d32f2f; background: #ffebee; }
+
+        @keyframes pulse {
+          0% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.7; transform: scale(1.02); }
+          100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* --- Таймер --- */
+        .audio-recorder-container .recorder-timer {
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin: 15px 0;
+          color: #333;
+          letter-spacing: 2px;
+        }
+
+        /* --- КОНТРОЛЫ И КНОПКИ (ИЗОЛИРОВАННЫЕ) --- */
+        .audio-recorder-container .recorder-controls {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          width: 100%;
+        }
+
+        /* Применяем стили ТОЛЬКО к кнопкам внутри нашего контейнера */
+        .audio-recorder-container button {
+          padding: 12px 24px;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-weight: 600;
+          font-size: 1rem;
+          transition: all 0.2s ease;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          /* Важно: сбрасываем возможные глобальные стили вашей темы, если они мешают */
+          line-height: 1.5; 
+          text-transform: none;
+        }
+
+        .audio-recorder-container button:active {
+          transform: translateY(1px);
+        }
+
+        /* Специфичные цвета кнопок через префикс контейнера */
+        .audio-recorder-container .btn-record { 
+          background-color: #579af6; 
+          color: white; 
+          box-shadow: 0 4px 10px rgba(87, 154, 246, 0.3);
+        }
+        .audio-recorder-container .btn-record:hover { 
+          background-color: #4a8ce0; 
+          transform: translateY(-2px); 
+        }
+        .audio-recorder-container .btn-record:disabled { 
+          background-color: #ccc; 
+          cursor: not-allowed; 
+          box-shadow: none;
+          transform: none;
+        }
+
+        .audio-recorder-container .btn-pause { background-color: #ffca28; color: #333; }
+        .audio-recorder-container .btn-pause:hover { background-color: #ffb300; }
+
+        .audio-recorder-container .btn-resume { background-color: #66bb6a; color: white; }
+        .audio-recorder-container .btn-resume:hover { background-color: #4caf50; }
+
+        .audio-recorder-container .btn-stop { 
+          background-color: #ef5350; 
+          color: white; 
+          box-shadow: 0 4px 10px rgba(239, 83, 80, 0.3);
+        }
+        .audio-recorder-container .btn-stop:hover { background-color: #e53935; transform: translateY(-2px); }
+
+        .audio-recorder-container .btn-retry { 
+          background-color: #90a4ae; 
+          color: white; 
+          margin-top: 15px;
+          width: 100%;
+          max-width: 200px;
+        }
+        .audio-recorder-container .btn-retry:hover { background-color: #78909c; }
+
+        /* --- АУДИО ПЛЕЕР --- */
+        .audio-recorder-container .recorder-preview {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+          background: white;
+          padding: 15px;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .audio-recorder-container .audio-player {
+          width: 100%;
+          max-width: 500px;
+          height: 45px;
+          margin: 0 auto;
+          outline: none;
+          border-radius: 4px;
+        }
+
+        .audio-recorder-container .recorder-actions {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .audio-recorder-container .recorder-error-message {
+          color: #d32f2f;
+          margin: 15px 0;
+          font-size: 0.95rem;
+          line-height: 1.4;
+          background: #ffebee;
+          padding: 10px;
+          border-radius: 6px;
+          border-left: 4px solid #d32f2f;
+        }
+
+        .audio-recorder-container .recorder-hint {
+          font-size: 0.85rem;
+          color: #666;
+          margin-top: 20px;
+          font-style: italic;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 480px) {
+          .audio-recorder-container .recorder-timer {
+            font-size: 2rem;
+          }
+          
+          .audio-recorder-container .audio-player {
+            max-width: 100%;
+          }
+          
+          .audio-recorder-container button {
+            width: 100%;
+            max-width: none;
+          }
+        }
+
+        .form-actions {
+          display: flex;
+          justify-content: center;
+          margin-top: 2rem;
+        }
+
+
+/* Стили для карточки результата */
+.result-card {
+  margin-bottom: 24px;
+  padding: 20px;
+  border-radius: 12px;
+  animation: fadeIn 0.4s ease-out;
+  border: 1px solid transparent;
+}
+
+.result-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.result-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.result-text h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.result-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.confidence-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px !important;
+}
+
+.confidence-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Цветовые схемы для результатов */
+.result-real {
+  background-color: #e8f5e9;
+  border-color: #c8e6c9;
+  color: #2e7d32;
+}
+.result-real .confidence-badge {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+}
+
+.result-fake {
+  background-color: #ffebee;
+  border-color: #ffcdd2;
+  color: #c62828;
+}
+.result-fake .confidence-badge {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+}
+
+.result-error {
+  background-color: #fff3e0;
+  border-color: #ffe0b2;
+  color: #ef6c00;
+}
+.result-error .confidence-badge {
+  background-color: #ffe0b2;
+  color: #e65100;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Стили для переключателей режимов и кнопок (базовые, дополните существующие) */
+.submit-button.reset-button {
+  background-color: #607d8b;
+}
+.submit-button.reset-button:hover:not(:disabled) {
+  background-color: #546e7a;
+}

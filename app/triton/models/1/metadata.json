@@ -1,0 +1,15 @@
+{
+    "thresholds": {
+        "base": 0.98836029,
+        "confidence": {
+            "real": {
+                "low": 0.3,
+                "high": 0.025
+            },
+            "fake": {
+                "low": 0.9950,
+                "high": 0.9975
+            }
+        }
+    }
+}
