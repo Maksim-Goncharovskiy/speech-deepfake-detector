@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useRef } from 'react';
+import React, { useCallback, useState, useRef, useEffect } from 'react'; 
 
 interface FileUploadProps {
   onFileSelect: (file: File) => void;
@@ -13,7 +13,23 @@ const FileUpload: React.FC<FileUploadProps> = ({
 }) => {
   const maxSizeBytes = maxSizeMB * 1024 * 1024;
   const [isDragOver, setIsDragOver] = useState(false);
+  const [audioUrl, setAudioUrl] = useState<string | null>(null); 
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+
+  useEffect(() => {
+    if (selectedFile) {
+      const url = URL.createObjectURL(selectedFile);
+      setAudioUrl(url);
+
+      return () => {
+        URL.revokeObjectURL(url);
+      };
+    } else {
+      setAudioUrl(null);
+    }
+  }, [selectedFile]);
+
 
   const handleFileValidation = useCallback((file: File) => {
     if (!file) return false;
@@ -106,13 +122,25 @@ const FileUpload: React.FC<FileUploadProps> = ({
           </p>
         </div>
       </div>
+      
       {selectedFile && (
         <div className="file-info">
-          <p>Файл: {selectedFile.name}</p>
-          <p>Размер: {(selectedFile.size / (1024 * 1024)).toFixed(2)} MB</p>
-          <p>Тип: {selectedFile.type}</p>
+          <div className="file-details">
+            <p><strong>Файл:</strong> {selectedFile.name}</p>
+            <p><strong>Размер:</strong> {(selectedFile.size / (1024 * 1024)).toFixed(2)} MB</p>
+            <p><strong>Тип:</strong> {selectedFile.type}</p>
+          </div>
+          
+          {/* Блок предпрослушивания */}
+          {audioUrl && (
+            <div className="audio-preview-wrapper" style={{ marginTop: '1rem' }}>
+              <p style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#555' }}>Прослушать:</p>
+              <audio controls src={audioUrl} className="audio-player" style={{ width: '100%' }} />
+            </div>
+          )}
         </div>
       )}
+      
       <style>{`
         .visually-hidden {
           position: absolute;
@@ -179,6 +207,14 @@ const FileUpload: React.FC<FileUploadProps> = ({
           border-radius: 4px;
           font-size: 0.9rem;
           border-left: 4px solid #007bff;
+        }
+
+        .file-details p {
+          margin: 0.25rem 0;
+        }
+
+        .audio-player {
+          outline: none;
         }
       `}</style>
     </div>
